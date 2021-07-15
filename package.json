@@ -1,0 +1,22 @@
+{
+  "name": "faq-accordion-card",
+  "version": "1.0.0",
+  "description": "![Design preview for the FAQ accordion card coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass scss/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khazin/FAQ-accordion-card.git"
+  },
+  "author": "khazin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khazin/FAQ-accordion-card/issues"
+  },
+  "homepage": "https://github.com/khazin/FAQ-accordion-card#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

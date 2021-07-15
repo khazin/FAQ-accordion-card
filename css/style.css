@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+:root {
+  /***********
+    FONTS COLORS
+    ************/
+  /*text*/
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: rgb(244, 124, 87);
+  /*background gradient*/
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  /*neutral text*/
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+  /*dividers*/
+  --light-grayish-blue: hsl(240, 5%, 91%);
+  /**********
+    FONT FAMILY
+    ***********/
+  /*fonts*/
+  --kumbh-sans: "Kumbh Sans", sans-serif; }
+
+/***********
+GLOBAL STYLE
+************/
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: black;
+  font-family: var(--kumbh-sans); }
+
+a {
+  text-decoration: none; }
+
+/************
+MOBILE LAYOUT
+*************/
+/*card layout styles*/
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(#af67e9, #6565e7);
+  padding: 10rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.card {
+  position: relative;
+  background-color: white;
+  width: 87.5%;
+  min-height: 69.5vh;
+  border-radius: 22px;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3rem 2rem 0 rgba(0, 0, 0, 0.2);
+  transform: translateY(2rem); }
+
+/*card image styles*/
+.image {
+  position: absolute;
+  top: 0rem;
+  width: 30rem;
+  height: 22rem;
+  background-image: url(../images/illustration-woman-online-mobile.svg), url(../images/bg-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: 1rem 0rem, 4rem 10.5rem;
+  transform: translate(-1rem, -11rem); }
+
+/*accordion styles*/
+.accordion {
+  width: 85%;
+  margin-top: 13.5rem; }
+  .accordion--title {
+    text-align: center;
+    font-size: 3.2rem;
+    color: var(--very-dark-desaturated-blue);
+    margin-bottom: 3.5rem; }
+  .accordion--list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.8rem;
+    border-bottom: 1px solid var(--light-grayish-blue); }
+  .accordion--question {
+    display: flex;
+    justify-content: space-between;
+    color: var(--very-dark-grayish-blue);
+    padding-bottom: 1.6rem;
+    cursor: pointer; }
+    .accordion--question p {
+      font-size: 1.3rem; }
+    .accordion--question:hover {
+      color: var(--soft-red); }
+  .accordion--icon {
+    width: 1rem;
+    height: 0.7rem;
+    background-image: url(../images/icon-arrow-down.svg); }
+  .accordion--answer {
+    display: none;
+    width: 90%;
+    margin-bottom: 1.5rem;
+    color: var(--dark-grayish-blue);
+    font-size: 1.2rem;
+    line-height: 1.8rem; }
+
+/*active accordion styles*/
+input {
+  display: none; }
+
+input:checked ~ label > p {
+  font-weight: 700;
+  color: var(--very-dark-desaturated-blue); }
+
+input:checked ~ label > .accordion--icon {
+  transform: rotate(180deg); }
+
+input:checked ~ .accordion--answer {
+  display: initial; }
+
+/************
+TABLET LAYOUT
+*************/
+@media screen and (min-width: 768px) {
+  /*card layout styles*/
+  .container {
+    width: 100%;
+    padding: 0; }
+  .card {
+    position: inherit;
+    width: 65%;
+    min-height: 50.5vh;
+    margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    transform: translateY(0); }
+  /*card image styles*/
+  .image {
+    position: relative;
+    width: 26rem;
+    min-height: inherit;
+    background-image: url(../images/illustration-woman-online-mobile.svg), url(../images/bg-pattern-mobile.svg);
+    background-position: 380% 50%, 111% 67%;
+    transform: translateY(0rem) translateX(0rem); }
+  /*accordion styles*/
+  .accordion {
+    width: 80%;
+    margin-top: initial;
+    padding: 4rem 0; }
+    .accordion--title {
+      text-align: initial;
+      margin-bottom: 4rem; }
+    .accordion--question p {
+      font-size: 1.3rem; }
+    .accordion--answer {
+      font-size: 1.2rem;
+      width: 100%; } }
+
+/*************
+DESKTOP LAYOUT
+**************/
+@media screen and (min-width: 1366px) {
+  .card {
+    width: 59%;
+    min-height: 66.5vh;
+    grid-template-columns: 1fr 1fr; }
+  /*card image styles*/
+  .image {
+    width: 45rem;
+    background-image: url(../images/illustration-woman-online-desktop.svg), url(../images/bg-pattern-desktop.svg);
+    background-position: 380% 50%, 111% 67%; }
+    .image::before {
+      content: "";
+      position: absolute;
+      background-image: url(../images/illustration-box-desktop.svg);
+      height: 11rem;
+      width: 10rem;
+      background-position: -4.5rem 0rem;
+      top: 41%;
+      left: -5rem; }
+  /*accordion styles*/
+  .accordion {
+    width: 75%; }
+    .accordion--question p {
+      font-size: 1.4rem; } }
+
+/****************
+ATTRIBUTION STYLE
+*****************/
+.attribution {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center; }
+  .attribution a {
+    font-size: 1.5rem;
+    color: white; }
