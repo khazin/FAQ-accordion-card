@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/khazin/FAQ-accordion-card](https://github.com/khazin/FAQ-accordion-card)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://khazin.github.io/FAQ-accordion-card/](https://khazin.github.io/FAQ-accordion-card/)
 
 ## My process
 
