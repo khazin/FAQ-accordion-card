@@ -63,4 +63,4 @@ Users should be able to:
 ## Author
 
 - Frontend Mentor - [@khazin](https://www.frontendmentor.io/profile/khazin)
-- Twitter - [@khazin](https://www.github.com/khazin)
+- Github - [@khazin](https://www.github.com/khazin)
